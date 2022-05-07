@@ -23,6 +23,9 @@ public class PlayerHealth : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) {
             TakeDamage(10);
         }
+        if (CurrentHealth < 0 || CurrentHealth == 0) {
+            Destroy(gameObject);
+        }
     }
 
     void TakeDamage(int damage) {
