@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CameraRoam : MonoBehaviour
 {
+ 
+
     public float CamSpeed = 20;
     public float ScreenSizeThickness = 10;
+    
 
     public static bool roam = true;
 
@@ -13,6 +16,10 @@ public class CameraRoam : MonoBehaviour
     {
         if (roam == true)
             move();
+        if (roam == false)
+        {
+            GetComponent<CameraFollow>().free();
+        } 
     }
 
     public void move()
