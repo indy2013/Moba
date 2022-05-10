@@ -5,17 +5,10 @@ using UnityEngine.UI;
 
 public class healthbar : MonoBehaviour
 {
-
-    public Slider slider;
-
-    public void SetMaxHealth(int health) {
-
-        slider.maxValue = health;
-        slider.value = health;
+    private void LateUpdate()
+    {
+        transform.LookAt(Camera.main.transform);
+        transform.Rotate(0, 180, 0);
     }
 
-    public void SetHealth(int health) {
-
-        slider.value = health;
-    }
 }
