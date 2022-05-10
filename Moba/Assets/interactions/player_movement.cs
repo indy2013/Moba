@@ -24,6 +24,8 @@ public class player_movement : MonoBehaviour
     void Update()
     {
 
+        agent.speed = movespeed.moveSpeed;
+
         if (herocombatScript.targetedEnemy != null) {
             if (herocombatScript.targetedEnemy.GetComponent<HeroCombat>() != null)
             {

@@ -10,14 +10,13 @@ public class stats : MonoBehaviour
     public float attackSpeed;
     public float attackTime;
     public float moveSpeed;
-    
     HeroCombat heroCombatScript;
+   
     
 
     void Start()
     {
         heroCombatScript = GameObject.FindGameObjectWithTag("player").GetComponent<HeroCombat>();
-        moveSpeed = GameObject.FindGameObjectWithTag("player").GetComponent<>
     } 
 
     // Update is called once per frame
