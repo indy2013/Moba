@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
+    [SerializeField] Transform player;
     [SerializeField] Transform spawnPoint;
     stats statsScript;
 
@@ -17,7 +18,7 @@ public class Respawn : MonoBehaviour
     {
         if(statsScript.health <= 5)
         {
-            transform.player.position = spawnPoint.position;
+            player.transform.position = spawnPoint.transform.position;
         }
     }
 }
