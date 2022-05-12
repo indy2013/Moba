@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class stats : MonoBehaviour
 {
-    public float maxHealth;
+    public int maxHealth;
     public float health;
+    public int armor;
+    public int magicRes;
     public float attackDmg;
     public float attackSpeed;
     public float attackTime;

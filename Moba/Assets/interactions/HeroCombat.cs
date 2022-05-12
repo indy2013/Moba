@@ -5,7 +5,9 @@ using UnityEngine;
 public class HeroCombat : MonoBehaviour
 {
     public enum HeroAttackType { Melee, Ranged };
+    public enum HeroAttackDmg { AD, AP };
     public HeroAttackType heroattacktype;
+    public HeroAttackDmg heroattackdmg;
 
     public GameObject targetedEnemy;
     public float attackrange;
@@ -70,7 +72,15 @@ public class HeroCombat : MonoBehaviour
 
             if (targetedEnemy.GetComponent<Targetable>().enemytype == Targetable.Enemytype.minion)
             {
-                targetedEnemy.GetComponent<stats>().health -= statsScript.attackDmg;
+                if(heroattackdmg == HeroAttackDmg.AD)
+                {
+                    targetedEnemy.GetComponent<stats>().health -= statsScript.attackDmg / (1 + (100 / targetedEnemy.GetComponent<stats>().armor));
+                }
+                if(heroattackdmg == HeroAttackDmg.AP)
+                {
+                    targetedEnemy.GetComponent<stats>().health -= statsScript.attackDmg / (1 + (100 / targetedEnemy.GetComponent<stats>().magicRes));
+                }
+
             }
         }
 

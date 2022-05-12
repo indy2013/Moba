@@ -8,16 +8,13 @@ public class PlayerHealth : MonoBehaviour
 
     public Slider playerSlider3D;
     Slider playerSlider2D;
-
-    
-
     stats statsScript;
 
     void Start()
     {
         statsScript = GameObject.FindGameObjectWithTag("player").GetComponent<stats>();
 
-       playerSlider2D = GetComponent<Slider>();
+        playerSlider2D = GetComponent<Slider>();
 
         playerSlider3D.maxValue = statsScript.maxHealth;
         playerSlider2D.maxValue = statsScript.maxHealth;
