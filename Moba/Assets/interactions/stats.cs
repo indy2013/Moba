@@ -19,11 +19,11 @@ public class stats : MonoBehaviour
         heroCombatScript = GameObject.FindGameObjectWithTag("player").GetComponent<HeroCombat>();
     } 
 
-    // Update is called once per frame
+
     void Update()
     {
         if (health <= 0) {
-            Destroy(gameObject);
+            //Destroy(gameObject);    Dit destroyed ook player dus deze moet aan gepast worden dat dit alleen de minion destroyed
             heroCombatScript.targetedEnemy = null;
             heroCombatScript.performMeleeAttack = false;
         }

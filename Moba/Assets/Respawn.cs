@@ -16,9 +16,11 @@ public class Respawn : MonoBehaviour
 
     void Update()
     {
-        if(statsScript.health <= 5)
+        if(statsScript.health <= 0)
         {
             player.transform.position = spawnPoint.transform.position;
+            statsScript.health = statsScript.maxHealth;
         }
+        
     }
 }
