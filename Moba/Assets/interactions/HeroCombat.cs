@@ -74,11 +74,11 @@ public class HeroCombat : MonoBehaviour
             {
                 if(heroattackdmg == HeroAttackDmg.AD)
                 {
-                    targetedEnemy.GetComponent<stats>().health -= statsScript.attackDmg / (1 + (100 / targetedEnemy.GetComponent<stats>().armor));
+                    targetedEnemy.GetComponent<stats>().health -= statsScript.attackDmg / (1 + (targetedEnemy.GetComponent<stats>().armor / 100));
                 }
                 if(heroattackdmg == HeroAttackDmg.AP)
                 {
-                    targetedEnemy.GetComponent<stats>().health -= statsScript.attackDmg / (1 + (100 / targetedEnemy.GetComponent<stats>().magicRes));
+                    targetedEnemy.GetComponent<stats>().health -= statsScript.attackDmg / (1 + (targetedEnemy.GetComponent<stats>().magicRes / 100 ));
                 }
 
             }

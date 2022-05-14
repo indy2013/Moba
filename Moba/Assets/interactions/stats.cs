@@ -6,8 +6,8 @@ public class stats : MonoBehaviour
 {
     public int maxHealth;
     public float health;
-    public int armor;
-    public int magicRes;
+    public float armor;
+    public float magicRes;
     public float attackDmg;
     public float attackSpeed;
     public float attackTime;
